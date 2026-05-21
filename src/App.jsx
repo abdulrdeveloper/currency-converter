@@ -28,14 +28,24 @@ function App() {
     <div
       className="app-container"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1640161704729-cbe966a08476?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+        backgroundImage: `url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')`,
       }}
     >
       <div className="app-overlay"></div>
       
       <div className="card-container">
         <div className="converter-card">
+          
+          <div className="live-status">
+            <span className="status-dot"></span>
+            LIVE EXCHANGE RATES
+          </div>
+          
+          <h1 className="app-title">Currency<br/>Converter</h1>
+          <div className="app-divider"></div>
+
           <form
+            className="converter-form"
             onSubmit={(e) => {
               e.preventDefault();
               convert();
