@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .app-container {
+    @apply w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-center bg-no-repeat relative;
+  }
+
+  .app-overlay {
+    @apply absolute inset-0 bg-black/50 backdrop-blur-[2px] z-0;
+  }
+
+  .card-container {
+    @apply w-full max-w-md mx-auto relative z-10;
+  }
+
+  .converter-card {
+    @apply border border-white/10 rounded-3xl p-7 backdrop-blur-lg bg-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] overflow-hidden relative;
+  }
+
+  .converter-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent pointer-events-none;
+  }
+
+  .input-box-wrapper {
+    @apply w-full mb-3;
+  }
+
+  .swap-btn-wrapper {
+    @apply relative w-full h-0.5 my-3;
+  }
+
+  .swap-btn {
+    @apply absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-4 border-[#121212] rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-2 transition-all duration-300 hover:scale-110 hover:rotate-180 shadow-lg shadow-cyan-500/30;
+  }
+
+  .submit-btn {
+    @apply w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-4 py-3 rounded-xl font-bold tracking-wider uppercase transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-cyan-500/50 hover:-translate-y-1 active:translate-y-0 mt-4;
+  }
+
+  /* InputBox specific classes */
+  .input-box {
+    @apply bg-black/40 p-4 rounded-2xl text-sm flex border border-white/5 shadow-inner hover:border-white/20 transition-all duration-300;
+  }
+
+  .input-label {
+    @apply text-gray-300 mb-2 inline-block font-semibold tracking-wide text-xs uppercase;
+  }
+
+  .amount-input {
+    @apply outline-none w-full bg-transparent py-1.5 text-white font-bold text-xl placeholder-gray-500 focus:ring-0;
+  }
+
+  .amount-input::-webkit-inner-spin-button,
+  .amount-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .currency-type-label {
+    @apply text-gray-300 mb-2 w-full font-semibold tracking-wide text-xs uppercase text-right;
+  }
+
+  .currency-select {
+    @apply rounded-xl px-3 py-1.5 bg-white/10 text-white font-bold cursor-pointer outline-none hover:bg-white/20 transition-all duration-300 border border-white/10 shadow-sm focus:ring-2 focus:ring-blue-500/50 appearance-none text-right;
+  }
+  
+  .currency-select option {
+    @apply bg-gray-900 text-white py-2;
+  }
+}
