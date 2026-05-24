@@ -67,3 +67,13 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📄 License
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+---
+<div align="center">
+  <sub>
+    You can find more of my work at <a href="https://abdulrdeveloper.me">abdulrdeveloper.me</a> &nbsp;·&nbsp; 
+    Read more posts at <a href="https://blog.abdulrdeveloper.me">blog.abdulrdeveloper.me</a> &nbsp;·&nbsp; 
+    See more projects on <a href="https://github.com/abdulrdeveloper">GitHub</a>
+  </sub>
+</div>
+<br/>
